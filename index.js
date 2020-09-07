@@ -4,7 +4,7 @@ const app = express();
 //route handling to get http request with GET method
 
 app.get("/", (req, res) => {
-	res.send({ hi: "there" });
+	res.send({ byr: "there" });
 });
 
 const PORT = process.env.PORT || 5000;
