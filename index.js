@@ -1,12 +1,10 @@
 const express = require("express");
+require("./services/passport");
+const authRoutes = require("./routes/authRoutes");
 const app = express();
 
-//route handling to get http request with GET method
-
-app.get("/", (req, res) => {
-	res.send({ byr: "there" });
-});
-
+authRoutes(app);
+//can do require("./routes/authRoutes")(app);
 const PORT = process.env.PORT || 5000;
 
 //express tell node to listen to port 5000
