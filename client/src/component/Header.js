@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Payments from "./Payments";
 
+//auth is from user model
 class Header extends Component {
 	renderContent() {
 		switch (this.props.auth) {
@@ -21,6 +22,9 @@ class Header extends Component {
 					<li key="1">
 						<Payments />
 					</li>,
+					<li key="3" style={{ margin: "0 0px" }}>
+						Credits:{this.props.auth.credits}
+					</li>,
 					<li key="2">
 						<a href="/api/logout">
 							<button className="btn">Logout</button>
@@ -36,7 +40,7 @@ class Header extends Component {
 				<div className="nav-wrapper blue">
 					<Link
 						to={this.props.auth ? "/surveys" : "/"}
-						className="left brang-logo"
+						className="brand-logo left"
 					>
 						<h3>Emaily</h3>
 					</Link>
