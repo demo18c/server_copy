@@ -1,4 +1,6 @@
 import "materialize-css/dist/css/materialize.min.css";
+import "materialize-css";
+import { Button, Card, Row, Col } from "react-materialize";
 
 import React from "react";
 import ReactDOM from "react-dom";
